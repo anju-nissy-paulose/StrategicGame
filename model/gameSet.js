@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Mongoose.Schema;
+const Schema = mongoose.Schema;
 const gamesetSchema = new Schema({
     name:{
         type:String,
@@ -10,7 +10,7 @@ const gamesetSchema = new Schema({
         required: true
     },
     price:{
-        type:int,
+        type:Number,
         required: true
     },
     available:{
@@ -22,4 +22,4 @@ const gamesetSchema = new Schema({
         required: true
     },
 });
-module.exports = mongoose.exports("gameSet",gamesetSchema);
+module.exports = mongoose.model("gameSet",gamesetSchema);
