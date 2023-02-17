@@ -1,25 +1,25 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const gamesetSchema = new Schema({
+const gameSetSchema = new Schema({
     name:{
         type:String,
-        required: true
+        required: true,
     },
     description:{
         type:String,
-        required: true
+        required: true,
     },
     price:{
         type:Number,
-        required: true
+        required: true,
     },
     available:{
         type:Boolean,
-        required: true
+       
     },
     image:{
         type:String,
-        required: true
+        required: true,
     },
 });
-module.exports = mongoose.model("gameSet",gamesetSchema);
+module.exports = mongoose.model("gameSet",gameSetSchema);
