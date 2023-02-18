@@ -1,13 +1,19 @@
 const express = require("express");
-const router = express.Router();
+const gameSetRouter = express.Router();
+const gameBookRouter = express.Router();
 const gameSet = require('../model/gameSet');
-
+const gameBook = require('../model/gameSet');
 const gameSetController = require('../controllers/gameSet-controller');
+const gameBookController = require('../controllers/gameBook-controller');
 
-router.get("/", gameSetController.getAllGameSets);
-router.post("/",gameSetController.addGameSets);
-router.get("/:id", gameSetController.getById);
-router.put("/:id", gameSetController.updateGameSet);
-router.delete("/:id", gameSetController.deleteGameSet);
+// game sets
+gameSetRouter.get("/", gameSetController.getAllGameSets);
+gameSetRouter.post("/",gameSetController.addGameSets);
+gameSetRouter.get("/:id", gameSetController.getById);
+gameSetRouter.put("/:id", gameSetController.updateGameSet);
+gameSetRouter.delete("/:id", gameSetController.deleteGameSet);
 
-module.exports = router;
+
+
+
+module.exports =gameSetRouter;
