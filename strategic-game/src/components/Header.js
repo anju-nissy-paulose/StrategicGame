@@ -1,8 +1,12 @@
 import React from 'react';
+//import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import wishList from '../images/wishlist.png';
 import account from '../images/account.png';
 import myCart from '../images/cart.png';
+
+
+
 const Header = () =>{
     return <div>
       <div>
@@ -11,7 +15,12 @@ const Header = () =>{
 
       <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Store Location</a>
       <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Support</a>
-      <a class="nav-item nav-link " href="#">Sign In </a>
+      <a class="nav-item nav-link " href="/Login">Sign In </a>
+
+ 
+      
+    
+     
  
 
 </nav>
