@@ -8,7 +8,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:5000/login-user", {
+    fetch("http://localhost:5000/registration", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -74,7 +74,7 @@ export default function Login() {
           </div>
 
           <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
               Submit
             </button>
           </div>

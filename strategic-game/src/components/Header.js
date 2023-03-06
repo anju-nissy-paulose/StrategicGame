@@ -8,19 +8,16 @@ import myCart from '../images/cart.png';
 
 
 const Header = () =>{
-    return <div>
+    return (<div>
       <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <a class="navbar-brand" href="#" style={{paddingRight:"35em"}}>Welcome to Canada Mind Games</a>
 
       <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Store Location</a>
-      <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Support</a>
+      <a class="nav-item nav-link" href="/gameBooks" style={{paddingRight:"5em"}}>Support</a>
       <a class="nav-item nav-link " href="/Login">Sign In </a>
 
- 
-      
-    
-     
+   
  
 
 </nav>
@@ -110,7 +107,7 @@ const Header = () =>{
         <a class="nav-link" href="#">Tournament </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
-        <a class="nav-link" href="#">About Us </a>
+        <a class="nav-link" href="/aboutUs">About Us </a>
       </li>
       
     </ul>
@@ -122,5 +119,6 @@ const Header = () =>{
 
 
     </div>
+    );
 };
 export default Header;

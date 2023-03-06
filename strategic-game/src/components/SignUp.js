@@ -16,7 +16,7 @@ export default function SignUp() {
       e.preventDefault();
 
       console.log(fname, lname, email, password);
-      fetch("http://localhost:5000/register", {
+      fetch("http://localhost:5000/registration", {
         method: "POST",
         crossDomain: true,
         headers: {
