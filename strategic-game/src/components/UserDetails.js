@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
-import AdminHome from "./AdminHome";
+import React, {  useEffect, useState } from "react";
+import AdminHome from "./Partials/Admin-header";
+//import AdminHome from "./AdminHome";
 
-import UserHome from "./UserHome";
+//import UserHome from "./UserHome";
+import UserHome from "./User-header";
 
 export default function UserDetails() {
   const [userData, setUserData] = useState("");
   const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/registration", {
+    fetch("http://localhost:5000/registration/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -23,6 +25,7 @@ export default function UserDetails() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "userData");
+        
         if (data.data.userType === "Admin") {
           setAdmin(true);
         }
@@ -32,7 +35,7 @@ export default function UserDetails() {
         if (data.data === "token expired") {
           alert("Token expired login again");
           window.localStorage.clear();
-          window.location.href = "./sign-in";
+          window.location.href = "./Login";
         }
       });
   }, []);

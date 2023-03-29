@@ -5,6 +5,26 @@ const gameSetSchema = new Schema({
         type:String,
         required: true,
     },
+    material:{
+        type:String,
+        required: true,
+    },
+    theme:{
+        type:String,
+        required: true,
+    }, 
+    genre:{
+        type:String,
+        required: true,
+    },
+    noOfPlayers:{
+        type:Number,
+        required: true,
+    },
+    colour:{
+        type:String,
+        required: true,
+    },
     description:{
         type:String,
         required: true,
@@ -12,10 +32,6 @@ const gameSetSchema = new Schema({
     price:{
         type:Number,
         required: true,
-    },
-    available:{
-        type:Boolean,
-       
     },
     image:{
         type:String,

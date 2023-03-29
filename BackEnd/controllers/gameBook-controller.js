@@ -3,7 +3,7 @@ const Book = require("../model/gameBook");
 const getAllBooks = async (req, res, next) => {
   let books;
   try {
-    books = await Book.find();
+    books = await Book.find()
   } catch (err) {
     console.log(err);
   }

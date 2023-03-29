@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import Header from './Header';
+
 
 export default function SignUp() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- const [userType, setUserType] = useState("");
+  const [userType, setUserType] = useState("");
   const [secretKey, setSecretKey] = useState("");
 
   const handleSubmit = (e) => {
-    if (userType ==="Admin" && secretKey !== "AdarshT") {
+    if (userType === "Admin" && secretKey !=="AdarshT") {
       e.preventDefault();
       alert("Invalid Admin");
     } else {
@@ -35,7 +37,7 @@ export default function SignUp() {
         .then((res) => res.json())
         .then((data) => {
           console.log(data, "userRegister");
-          if (data.status ==="ok") {
+          if (data.status === "ok") {
             alert("Registration Successful");
           } else {
             alert("Something went wrong");
@@ -45,11 +47,33 @@ export default function SignUp() {
   };
 
   return (
+  <div>
+     <header>
+      
+      <Header />
+      
+    </header>
     <div className="auth-wrapper" style={{width:"60em",paddingLeft:"30em",paddingTop:"4em"}}>
       <div className="auth-inner">
         <form onSubmit={handleSubmit}>
           <h3>Sign Up</h3>
-         
+          <div>
+            Register As
+            <input
+              type="radio"
+              name="UserType"
+              value="User"
+              onChange={(e) => setUserType(e.target.value)}
+            />
+            User
+            <input
+              type="radio"
+              name="UserType"
+              value="Admin"
+              onChange={(e) => setUserType(e.target.value)}
+            />
+            Admin
+          </div>
           {userType === "Admin" ? (
             <div className="mb-3">
               <label>Secret Key</label>
@@ -112,6 +136,7 @@ export default function SignUp() {
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 }

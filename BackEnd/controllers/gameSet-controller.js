@@ -5,7 +5,7 @@ const getAllGameSets = async(req,res,next)=>{
     //this route will provide all game sets 
     let gamesets;
     try{
-        gamesets = await gameSet.find();
+        gamesets = await gameSet.find()
     } 
     catch(err){
         console.log(err);
@@ -19,7 +19,7 @@ const getAllGameSets = async(req,res,next)=>{
    
 };
 
-const getById = async (req, res, next) => {
+const getGameSetById = async (req, res, next) => {
     const id = req.params.id;
     let gameset;
     try {
@@ -34,11 +34,11 @@ const getById = async (req, res, next) => {
   };
  //Add game sets  
 const addGameSets = async(req,res,next) =>{
-    const{name,description,price,available,image }=req.body;
+    const{name,description,price, material,theme,genre, noOfPlayers, colour,image}=req.body;
     let gameset;
     try {
          gameset = new gameSet({
-            name,description,price,available,image
+          name,description,price, material,theme,genre, noOfPlayers, colour,image
         });
         await gameset.save();
     } 
@@ -56,20 +56,20 @@ return res.status(201).json({gameset})
 
 const updateGameSet = async (req, res, next) => {
     const id = req.params.id;
-    const{name,description,price,available,image }=req.body;
+    const{name,description,price, material,theme,genre,noOfPlayers,colour,image}=req.body;
     let gameset;
     try {
       gameset = await gameSet.findByIdAndUpdate(id, {
-        name,description,price,available,image
+        name,description,price, material,theme,genre,noOfPlayers, colour,image
       });
-      book = await gameset.save();
+      gameset= await gameset.save();
     } catch (err) {
       console.log(err);
     }
     if (!gameset) {
       return res.status(404).json({ message: "Unable To Update By this ID" });
     }
-    return res.status(200).json({ book });
+    return res.status(200).json({ gameset });
   };
 
   // Delete gamesets 
@@ -91,6 +91,6 @@ const updateGameSet = async (req, res, next) => {
 
 exports.getAllGameSets = getAllGameSets;
 exports.addGameSets = addGameSets;
-exports.getById = getById;
+exports.getGameSetById = getGameSetById;
 exports.updateGameSet = updateGameSet;
 exports.deleteGameSet = deleteGameSet;

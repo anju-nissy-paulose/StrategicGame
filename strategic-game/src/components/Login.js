@@ -1,4 +1,5 @@
-import React, {useState } from "react";
+import React, {  useState } from "react";
+import Header from './Header';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -8,7 +9,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:5000/registration", {
+    fetch("http://localhost:5000/registration/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -29,13 +30,19 @@ export default function Login() {
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
 
-          window.location.href = "./userDetails";
+          window.location.href = "/userDetails";
         }
       });
   }
 
   return (
-    <div className="auth-wrapper" style={{width:"50em",paddingLeft:"30em",paddingTop:"4em"}}>
+    <div>
+      <header>
+      
+      <Header />
+      
+    </header>
+    <div className="auth-wrapper" style={{width:"60em",paddingLeft:"30em",paddingTop:"4em"}}>
       <div className="auth-inner">
         <form onSubmit={handleSubmit}>
           <h3>Sign In</h3>
@@ -74,7 +81,7 @@ export default function Login() {
           </div>
 
           <div className="d-grid">
-            <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
+            <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </div>
@@ -83,6 +90,7 @@ export default function Login() {
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 }

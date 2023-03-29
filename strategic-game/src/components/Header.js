@@ -6,26 +6,24 @@ import account from '../images/account.png';
 import myCart from '../images/cart.png';
 
 
-
-const Header = () =>{
+const Header = ({ userData }) =>{
+  
     return (<div>
       <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <a class="navbar-brand" href="#" style={{paddingRight:"35em"}}>Welcome to Canada Mind Games</a>
 
-      <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Store Location</a>
-      <a class="nav-item nav-link" href="/gameBooks" style={{paddingRight:"5em"}}>Support</a>
-      <a class="nav-item nav-link " href="/Login">Sign In </a>
-
-   
- 
+      <a class="nav-item nav-link" href="/userStoreLocation" style={{paddingRight:"5em"}}>Store Location</a>
+      <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Support</a>
+    
+      <a class="nav-item nav-link " href="/Login" >Sign In  </a> 
 
 </nav>
 
   </div>
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand App-logo App-logo-spin" href="#" style={{paddingRight:"10em"}}><img src={logo} width={80} height={80} /></a>
+  <a class="navbar-brand App-logo App-logo-spin" href="/" style={{paddingRight:"10em"}}><img src={logo} width={80} height={80} /></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -43,10 +41,10 @@ const Header = () =>{
         <a class="nav-link" href="#" ><img src={wishList} width={35} height={35} /></a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
-      <a class="nav-link" href="#" ><img src={account} width={30} height={30} /></a>
+      <a class="nav-link" href="#"  ><img src={account} width={30} height={30} /></a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
-      <a class="nav-link" href="#"><img src={myCart} width={30} height={30} /></a>
+      <a class="nav-link" href="#" ><img src={myCart} width={30} height={30} /></a>
       </li>
       
     </ul>    
@@ -59,17 +57,10 @@ const Header = () =>{
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item dropdown" style={{paddingRight:"5em"}}>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Game Product
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Mind Game Set</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Mind Game Book</a>
-          
-        </div>
+    <li class="nav-item" style={{paddingRight:"5em"}}>
+        <a class="nav-link" href="/gameBooks">Game Product </a>
       </li>
+    
       <li class="nav-item dropdown" style={{paddingRight:"5em"}}>
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Online Game 
@@ -114,8 +105,6 @@ const Header = () =>{
    
   </div>
 </nav>
-
-
 
 
     </div>

@@ -1,8 +1,14 @@
 import React from 'react';
 import aboutUs from '../images/aboutUs.jpg';
+import Header from './Header';
 
 const AboutUs = () =>{
     return <div>
+         <header>
+      
+      <Header />
+      
+    </header>
         <section class="about-section">
         <div class="container">
             <div class="row">                

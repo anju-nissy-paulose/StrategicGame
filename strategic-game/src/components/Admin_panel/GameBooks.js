@@ -1,7 +1,7 @@
 import React ,{ useEffect, useState } from "react";
 import axios from "axios";
 import Book from "./GameBook";
-const URL = "http://localhost:5000/gamebooks";
+const URL = "http://localhost:5000/gameBooks";
 const fetchHandler = async () => {
     return await axios.get(URL).then((res) => res.data);
   };
@@ -15,26 +15,26 @@ const fetchHandler = async () => {
     return (
       <div>  
         <section>
-          <div className="container ml-5">
+          <div className="container  ml-5 mt-5">
             <div className="row"> 
-            <a href="#" className="btn btn-success">Add Product </a>
+            <a href="/addGameBook" className="btn btn-success">Add Product </a>
             </div>
           </div>
-         <div className="cotainer ml-5 mt-5"style={{paddingRight:"5em"}} >
-         <table class="table">
-      <thead class="thead-dark">
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Author</th>
-              <th scope="col">description</th>
-              <th scope="col">Price</th>
-              <th scope="col">Image</th>
-              <th scope="col">Modify Customer</th> 
+         <div className="cotainer ml-8 mt-5" >
+         <table class="table ml-8 ">
+      <thead class="thead-dark"style={{paddingLeft:"15em"}}>
+            <tr >
+              <th scope="col" style={{paddingRight:"8em"}}>Name</th>
+              <th scope="col" style={{paddingRight:"5em"}}>Author</th>
+              <th scope="col" style={{paddingRight:"25em"}}>description</th>
+              <th scope="col" style={{paddingRight:"1em"}}>Price</th>
+              <th scope="col" style={{paddingRight:"5em"}}>Image</th>
+              <th scope="col" style={{paddingRight:"5em"}}>Modify Customer</th> 
             </tr>
           </thead>
           </table>
           <div>
-          <ul style={{ listStyle: 'none' ,paddingRight:"2em" }}> 
+          <ul style={{ listStyle: 'none' ,marginRight:"1em" }}> 
           
          {books &&
             books.map((book, i) => (
