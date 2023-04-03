@@ -1,11 +1,11 @@
-const gameSet = require('../model/gameSet');
+const GameSet = require('../model/gameSet');
 
 
 const getAllGameSets = async(req,res,next)=>{
     //this route will provide all game sets 
     let gamesets;
     try{
-        gamesets = await gameSet.find()
+        gamesets = await GameSet.find()
     } 
     catch(err){
         console.log(err);
@@ -23,7 +23,7 @@ const getGameSetById = async (req, res, next) => {
     const id = req.params.id;
     let gameset;
     try {
-      gameset = await gameSet.findById(id);
+      gameset = await GameSet.findById(id);
     } catch (err) {
       console.log(err);
     }
@@ -37,7 +37,7 @@ const addGameSets = async(req,res,next) =>{
     const{name,description,price, material,theme,genre, noOfPlayers, colour,image}=req.body;
     let gameset;
     try {
-         gameset = new gameSet({
+         gameset = new GameSet({
           name,description,price, material,theme,genre, noOfPlayers, colour,image
         });
         await gameset.save();
@@ -59,7 +59,7 @@ const updateGameSet = async (req, res, next) => {
     const{name,description,price, material,theme,genre,noOfPlayers,colour,image}=req.body;
     let gameset;
     try {
-      gameset = await gameSet.findByIdAndUpdate(id, {
+      gameset = await GameSet.findByIdAndUpdate(id, {
         name,description,price, material,theme,genre,noOfPlayers, colour,image
       });
       gameset= await gameset.save();
@@ -78,7 +78,7 @@ const updateGameSet = async (req, res, next) => {
     const id = req.params.id;
     let gameset;
     try {
-      gameset = await gameSet.findByIdAndRemove(id);
+      gameset = await GameSet.findByIdAndRemove(id);
     } catch (err) {
       console.log(err);
     }

@@ -2,7 +2,7 @@
   import axios from "axios";
   import React, { useState } from "react";
   import { useNavigate } from "react-router-dom";
-  
+  import AdminHome from "../Partials/Admin-header";
   const AddGameBook = () => {
     const history = useNavigate();
     const [inputs, setInputs] = useState({
@@ -40,8 +40,12 @@
       console.log(inputs, checked);
       sendRequest().then(() => history("/GameBooks"));
     };
+
+
+   
     return (
         <div >
+          <AdminHome />
           <h2 className="container mt-5" style={{color:"Blue"}}>Add Product</h2>
             <div className="container mt-5">
                     <form onSubmit={handleSubmit}>

@@ -4,7 +4,7 @@ import logo from '../images/logo.png';
 import wishList from '../images/wishlist.png';
 import account from '../images/account.png';
 import myCart from '../images/cart.png';
-
+const Url = '/'
 
 const Header = ({ userData }) =>{
   
@@ -14,7 +14,7 @@ const Header = ({ userData }) =>{
   <a class="navbar-brand" href="#" style={{paddingRight:"35em"}}>Welcome to Canada Mind Games</a>
 
       <a class="nav-item nav-link" href="/userStoreLocation" style={{paddingRight:"5em"}}>Store Location</a>
-      <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Support</a>
+      <a class="nav-item nav-link" href={Url} style={{paddingRight:"5em"}}>Support</a>
     
       <a class="nav-item nav-link " href="/Login" >Sign In  </a> 
 
@@ -58,7 +58,7 @@ const Header = ({ userData }) =>{
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <li class="nav-item" style={{paddingRight:"5em"}}>
-        <a class="nav-link" href="/gameBooks">Game Product </a>
+        <a class="nav-link" href="/Login">Game Product </a>
       </li>
     
       <li class="nav-item dropdown" style={{paddingRight:"5em"}}>

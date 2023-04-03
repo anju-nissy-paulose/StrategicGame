@@ -1,5 +1,6 @@
 import React ,{ useEffect, useState } from "react";
 import axios from "axios";
+import AdminHome from "../Partials/Admin-header";
 import Book from "./GameBook";
 const URL = "http://localhost:5000/gameBooks";
 const fetchHandler = async () => {
@@ -13,7 +14,8 @@ const fetchHandler = async () => {
     console.log(books);
 
     return (
-      <div>  
+      <div> 
+        <AdminHome /> 
         <section>
           <div className="container  ml-5 mt-5">
             <div className="row"> 

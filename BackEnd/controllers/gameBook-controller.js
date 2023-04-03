@@ -1,9 +1,29 @@
 const Book = require("../model/gameBook");
+const redis = require('redis');
+let redisClient;
+
+// Redis connection
+(async () => {
+  redisClient = redis.createClient();
+  redisClient.on('error', (error)=> console.log('redis error'+error));
+  await redisClient.connect();
+})();
 
 const getAllBooks = async (req, res, next) => {
+
+  const cachedData = await redisClient.get('gamebooks');
+  if(cachedData) {
+      res.send(JSON.parse(cachedData));
+      return;
+  }
+ 
+
   let books;
   try {
     books = await Book.find()
+    const books = {status: 'success', data: books};
+    await redisClient.set('gamebooks', JSON.stringify(response));
+    
   } catch (err) {
     console.log(err);
   }
@@ -11,7 +31,10 @@ const getAllBooks = async (req, res, next) => {
   if (!books) {
     return res.status(404).json({ message: "No products found" });
   }
-  return res.status(200).json({ books });
+  
+  setTimeout(() => {
+    return res.status(200).json({ books });
+}, 1000);
 };
 
 const getById = async (req, res, next) => {

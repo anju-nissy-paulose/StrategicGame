@@ -1,6 +1,7 @@
 const express = require('express');
 const mogoose = require('mongoose');
 const cors = require('cors');
+
 //const redis = require("redis");
 //require('./utils/redis');
 const gameSetRouter = require('./routes/strategicgame-routes');
@@ -8,7 +9,14 @@ const gameBookRouter = require('./routes/strategicgameBook-routes');
 //const loginRouter = require('./routes/login-routes');
 const registerRouter = require('./routes/registration-routes');
 const storeLocationRouter = require('./routes/storeLocation-routes');
+//redis 
+const redis = require('redis');
+const client = redis.createClient();
+
+
 const app = express();
+
+
 
 //middleware
 app.use(express.json());

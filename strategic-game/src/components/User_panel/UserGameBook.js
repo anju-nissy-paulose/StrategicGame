@@ -1,19 +1,23 @@
-//import axios from "axios";
-import React  from "react";
-//import {  useNavigate } from "react-router-dom";
+import axios from "axios";
+//import { Link, useNavigate } from "react-router-dom";
+import React, {  useEffect, useState } from "react";
+import UserHome from "../User-header";
 //import "./Book.css";
-const UserBook = (props) => {
-  //const history = useNavigate();
-  const { _id, name, author, description, price, image } = props.book;
+
+const Book = (props) => {
   
+  const { name, author, description, price, image } = props.book;
+  
+ 
  
   
   return (
+    
     <div >
  
-         
       
  <section>
+ 
                     <div class="container mt-5">
                     
                         <div class="row">
@@ -25,7 +29,7 @@ const UserBook = (props) => {
                                         <p class="card-text">{description}</p>
                                         <p class="card-text">{author}</p>
                                         <p class="card-text">{price}</p>
-                                        <a href="#" class="btn btn-primary"> hii</a>
+                                        <a href="#" class="btn btn-primary"> buy</a>
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +38,7 @@ const UserBook = (props) => {
                     </div>    
                 </section>     
         </div>
-        
+
 
               
         
@@ -42,4 +46,4 @@ const UserBook = (props) => {
   );
 };
 
-export default UserBook;
+export default Book;

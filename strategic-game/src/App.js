@@ -25,6 +25,7 @@ import AddLocationForm from './components/Admin_panel/StoreLocation';
 import UserHeader from "./components/User-header";
 import UserGameBooks from './components/User_panel/UserGameBooks';
 import UserStoreLocation from './components/User_panel/userStoreLocation';
+import UserBook from './components/User_panel/UserGameBook';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
 
           <Route path="/userHeader" element={<UserHeader/>} />
           <Route path="/UserGameBooks" element={<UserGameBooks/>} />
+          <Route path="/UserBook" element={<UserBook/>} />
           <Route path="/StoreLocation" element={<AddLocationForm/>} />
           <Route path="/userStoreLocation" element={<UserStoreLocation/>} />
          
