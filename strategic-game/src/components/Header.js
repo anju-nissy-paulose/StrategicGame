@@ -38,7 +38,7 @@ const Header = ({ userData }) =>{
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active" style={{paddingRight:"5em"}}>
-        <a class="nav-link" href="#" ><img src={wishList} width={35} height={35} /></a>
+        <a class="nav-link" href="/Mycart" ><img src={wishList} width={35} height={35} /></a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
       <a class="nav-link" href="#"  ><img src={account} width={30} height={30} /></a>
@@ -84,15 +84,8 @@ const Header = ({ userData }) =>{
       </li>
       
       
-      <li class="nav-item dropdown" style={{paddingRight:"5em"}}>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tutorial
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Beginner</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Advanced</a>     
-        </div>
+      <li class="nav-item" style={{paddingRight:"5em"}}>
+        <a class="nav-link" href="/Login">Tutorial </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
         <a class="nav-link" href="#">Tournament </a>

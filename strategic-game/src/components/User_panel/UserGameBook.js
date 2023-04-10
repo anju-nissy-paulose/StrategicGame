@@ -4,6 +4,7 @@ import React, {  useEffect, useState } from "react";
 import UserHome from "../User-header";
 //import "./Book.css";
 
+
 const Book = (props) => {
   
   const { name, author, description, price, image } = props.book;
@@ -28,8 +29,9 @@ const Book = (props) => {
                                         <h5 class="card-title">{name}</h5>
                                         <p class="card-text">{description}</p>
                                         <p class="card-text">{author}</p>
-                                        <p class="card-text">{price}</p>
-                                        <a href="#" class="btn btn-primary"> buy</a>
+                                        <p class="card-text">${price}</p>
+                                        <a href="#" class="btn btn-primary"> Add to Cart </a> &nbsp;                                    
+                                        <a href="#" class="btn btn-primary"> Buy</a>
                                     </div>
                                 </div>
                             </div>

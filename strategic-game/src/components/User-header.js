@@ -70,7 +70,7 @@ const User_Header = ({ userData }) =>{
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/UserGameBooks">Mind Game Book</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Mind Game Set</a>
+          <a class="dropdown-item" href="/UserGameSets">Mind Game Set</a>
           
         </div>
       </li>
@@ -97,15 +97,8 @@ const User_Header = ({ userData }) =>{
       </li>
       
       
-      <li class="nav-item dropdown" style={{paddingRight:"5em"}}>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tutorial
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Beginner</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Advanced</a>     
-        </div>
+      <li class="nav-item" style={{paddingRight:"5em"}}>
+        <a class="nav-link" href="/Tutorial">Tutorial </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
         <a class="nav-link" href="#">Tournament </a>

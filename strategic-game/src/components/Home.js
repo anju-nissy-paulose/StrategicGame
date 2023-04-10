@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import PaymentForm from './User_panel/CheckoutForm';
 
 
 const Home = () =>{
@@ -11,6 +12,8 @@ const Home = () =>{
     </header>
     <div>
     This is a home page 
+    <h1>Stripe Payment Form</h1>
+      <PaymentForm />
     </div>
         
      

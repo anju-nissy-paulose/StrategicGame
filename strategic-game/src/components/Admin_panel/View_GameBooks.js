@@ -1,37 +1,39 @@
-import React from 'react';
-
-const ViewGameBook = () =>{
-     return <div>
-        <section>
-            <div class="container mt-5">
-             
-            <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Author</th>
-      <th scope="col">Description</th>
-      <th scope="col">Available</th>
-      <th scope="col">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-  {books.map(books => (
-    <tr>
-      <th scope="row">1</th>
-      <td>{books.name}</td>
-      <td>{books.author}</td>
-      <td>{books.description}</td>
-    </tr>
-  ))}
-  </tbody>
-</table>
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 
-            </div>    
-        </section>          
-        
-        </div>
-};
-export default ViewGameBook;
+function BookView() {
+  const { id } = useParams();
+  const [book, setBook] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchBook() {
+      try {
+        const response = await axios.get(`/gamebooks/${id}`);
+        setBook(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchBook();
+  }, [id]);
+
+  return (
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <h2>{book.name }</h2>
+          <p>Author: {book.author}</p>
+          <p>Description: {book.description}</p>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default BookView;

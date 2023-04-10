@@ -2,6 +2,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AdminHome from "../Partials/Admin-header";
 
 const AddGameSet = () => {
   const history = useNavigate();
@@ -49,6 +50,7 @@ const AddGameSet = () => {
   };
   return (
       <div >
+        <AdminHome />
         <h2 className="container mt-5" style={{color:"Blue"}}>Add Product</h2>
           <div className="container mt-5">
                   <form onSubmit={handleSubmit}>
@@ -63,17 +65,17 @@ const AddGameSet = () => {
        
     </div>
     <div class="form-group">
-        <label for="theme">theme</label>
+        <label for="theme">Theme</label>
         <input type="text" class="form-control" value={inputs.theme} onChange={handleChange}  name="theme"/>
        
     </div>
     <div class="form-group">
-        <label for="genrer"> genre</label>
+        <label for="genrer"> Genre</label>
         <input type="text" class="form-control" value={inputs.genre} onChange={handleChange}  name="genre"/>
        
     </div>
     <div class="form-group">
-        <label for="no Of Players">no Of Players</label>
+        <label for="no Of Players">No Of Players</label>
         <input type="text" class="form-control" value={inputs.noOfPlayers} onChange={handleChange}  name="noOfPlayers"/>
        
     </div>
@@ -98,7 +100,7 @@ const AddGameSet = () => {
         <input type="text" class="form-control"  value={inputs.image}   onChange={handleChange} name="image"/>
        
     </div>
-      <button type="submit" class="btn btn-primary">Add Book</button>
+      <button type="submit" class="btn btn-primary">Add Game Set</button>
 </form>
       </div>
       </div>
