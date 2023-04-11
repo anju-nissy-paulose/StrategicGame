@@ -14,6 +14,20 @@ const tutorialRouter = require('./routes/tutorial-routes')
 const addToCartRouter = require('./routes/addToCart-routes')
 const wishListRouter = require('./routes/wishList-routes')
 //const stripeRouter = require('./routes/stripe-routes')
+
+// tournament, game, ------merging codes............................................//
+
+//import seedRouter from './routes/seedRouter.js';
+const puzzleRouter  = require('./routes/gamepuzzle-routes')
+
+const newsRouter = require ('./routes/newsRouter');
+const strategyRouter = require('./routes/gamestrategy-routes') 
+const tournamentRouter = require ('./routes/tournamentRouter'); 
+const upcomingTourRouter = require('./routes/upcomingTourRoutes') ;
+const playedTourRouter = require('./routes/playedTourRoutes') ;
+const walletRouter = require('./routes/walletRoutes') ;
+ //---------------------------------------------------------------------------//
+
 //redis 
 const redis = require('redis');
 const client = redis.createClient();
@@ -38,6 +52,16 @@ app.use("/addtocart",addToCartRouter);//localhost:5000/addtocart
 app.use("/wishlist",wishListRouter);//localhost:5000/wishlist
 //app.use("/stripe",stripeRouter );//localhost:5000/wishlist
 
+//......merge code------------------------------------------------------------------//
+//app.use('/api/seed', seedRouter); //localhost:5000/api/seed
+app.use('/api/puzzles', puzzleRouter); //localhost:5000/api/puzzles
+app.use('/api/news', newsRouter); //localhost:5000/api/news
+app.use('/api/strategy', strategyRouter); //localhost:5000/api/strategy
+app.use('/api/tournament', tournamentRouter); //localhost:5000/api/tournament
+app.use('/api/upcomingTournament', upcomingTourRouter); //localhost:5000/api/upcomingTournament
+app.use('/api/playedTournament', playedTourRouter); //localhost:5000/api/playedTournament
+app.use('/api/wallet', walletRouter); //localhost:5000/api/wallet
+//-------------------------------------------------------------------------------------------//
 
 app.post('/api/payment', async (req, res) => {
     try {

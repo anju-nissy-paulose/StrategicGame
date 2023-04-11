@@ -1,0 +1,41 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #8f8d89;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgb(227, 118, 22), rgb(139, 136, 135));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgb(240, 112, 26), rgb(177, 161, 157))
+  }
+
+  .otherDetails{
+    width: 600px;
+  }
+  .profile-container{
+    height: 450px;
+  }
+  .profile-anchor{
+    margin: 0px 20px 0px 0px;
+  }
+  .profile-text{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .content-text{
+    color:rgb(232, 240, 244);
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .update-icon{
+    height: 20px;
+    color: white;
+  }
+  .info-text-data{
+    color:rgb(232, 240, 244);
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+  }

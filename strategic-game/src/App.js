@@ -37,6 +37,24 @@ import  UserWishlist from './components/UserWishList';
 import CheckoutForm from './components/User_panel/CheckoutForm';
 import StripeForm from './components/StripeForm';
 
+//--------------------------------merging----------------------------------//
+import Home1 from './components/Home/Home1';
+import Puzzle from './components/OnlineGames/Puzzle/Puzzle';
+import Support from './components/Support/Support';
+import PuzzleScreen from './components/OnlineGames/Puzzle/PuzzleScreen';
+import Strategy from './components/OnlineGames/Strategy/Strategy';
+import StrategyScreen from './components/OnlineGames/Strategy/StrategyScreen';
+import DinoPuzzle from './components/OnlineGames/Strategy/DinoPuzzle';
+import Tournament from './components/Tournaments/Tournaments';
+import UpcomingTour from './components/Tournaments/UpcomingTour';
+import ValidatePlayed from './components/Tournaments/ValidatePlayed';
+import DeadlineCheck from './components/Tournaments/DeadlineCheck';
+import Dino from './components/Tournaments/Dino';
+import A_Puzzle_List from './components/Admin/GameListing';
+import Puzzle_Edit from './components/Admin/GameEdit';
+import Puzzle_Create from './components/Admin/GameCreate';
+import Account from './components/UserAccount/Account';
+//---------------------------Merging Ends------------------------------------//
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   return (
@@ -48,7 +66,7 @@ function App() {
   
         <Routes>
           
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<Home1 />} />
           <Route
             exact
             path="/"
@@ -83,7 +101,26 @@ function App() {
           <Route exact path="/UserWishList" element={<UserWishlist/>} />
           <Route exact path="/CheckoutForm" element={<CheckoutForm/>} />
           <Route exact path="/StripeForm" element={<StripeForm/>} />
-          
+
+          {/*--------------------------------- Merging------------------------------ */}
+          <Route path="/Home1" element={<Home1 />} />
+          <Route path="/Puzzle" element={<Puzzle />} />
+          <Route path="/Support" element={<Support />} />
+          <Route path="/game/:slug" element={<PuzzleScreen />} />
+          <Route path="/Strategy" element={<Strategy />} />
+          <Route path="/strategy/:slug" element={<StrategyScreen />} />
+          <Route path="/Tournaments" element={<Tournament />} />
+          <Route path="/UpcomingTour" element={<UpcomingTour />} />
+          <Route path="/UpcomingTour/:slug" element={<Dino />} /> 
+          <Route path="/ValidatePlayed/:slug" element={<ValidatePlayed />} /> 
+          <Route path="/DeadlineCheck" element={<DeadlineCheck />} />
+          <Route path="/Dino" element={<Dino />} />
+          <Route path="/A_Puzzle/edit/:id" element={<Puzzle_Edit />} /> 
+          <Route path="/A_Puzzle/create" element={<Puzzle_Create />} /> 
+          <Route path="/A_Puzzle_List" element={<A_Puzzle_List />} />
+          <Route path="/Account" element={<Account />} />
+          <Route path="/DinoPuzzle" element={<DinoPuzzle />} />
+          {/* ---------------------------Merging Ends------------------------------------// */}
           
          
          

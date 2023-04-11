@@ -29,7 +29,7 @@ const User_Header = ({ userData }) =>{
   </div>
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand App-logo App-logo-spin" href="#" style={{paddingRight:"10em"}}><img src={logo} width={80} height={80} /></a>
+  <a class="navbar-brand App-logo App-logo-spin" href="/Home1" style={{paddingRight:"10em"}}><img src={logo} width={80} height={80} /></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -79,19 +79,11 @@ const User_Header = ({ userData }) =>{
           Online Game 
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Strategy</a>
+          <a class="dropdown-item" href="/Strategy">Strategy</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Puzzles</a>
+          <a class="dropdown-item" href="/Puzzle">Puzzles</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Word</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Brain Games</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Solitaire</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Poker</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Board</a>
+          
           
         </div>
       </li>

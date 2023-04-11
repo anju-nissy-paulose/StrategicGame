@@ -1,0 +1,97 @@
+.main-tournament {
+    padding: 2rem;
+    background-color: #9bb3f7;
+    
+}
+.tall-header {
+    border-left: 6px solid #f28508;
+    padding: 2px 0 0 15px;
+    margin: 60px 70px 40px;
+    text-transform: uppercase;
+    font-family: Saira,sans-serif;
+}
+span.header.large {    
+    font-size: 49px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    color: #fff;
+    margin-top: 15px;
+}
+.heading-h4 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+.flex-container {
+    display: flex;
+    margin-left: 10px;
+}
+
+.flex-child {
+    
+    border: 2px solid yellow;
+}  
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+.flex-container img{
+    height: 300px;
+    width: 600px;
+}
+.txt-cont{
+    flex:1.1;
+    border-radius: 25px;
+}
+.tournament-cont{
+    margin-left: 70px;
+    padding: 2rem;
+    height: 355px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+.tournament-p{
+    margin-top: 30px;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    color: #241075;
+}
+.view-txt{
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    color: #3308df;
+    text-align: center;
+}
+.view-tour{
+    font-family: RobotoMedium,sans-serif;
+    height: auto;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    font-size: 25px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 207, 207);
+    margin-top: 20px;
+}
+.view-tour a{
+    color: #478743;
+}
+.view-tour:hover{
+    background-color: rgb(240, 150, 234);
+}
+.tour-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
