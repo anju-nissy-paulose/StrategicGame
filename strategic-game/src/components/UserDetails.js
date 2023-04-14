@@ -1,9 +1,10 @@
 import React, {  useEffect, useState } from "react";
 import AdminHome from "./Partials/Admin-header";
-//import AdminHome from "./AdminHome";
+//import Home2 from "../components/Home/Home2";
 
 //import UserHome from "./UserHome";
-import UserHome from "./User-header";
+//import UserHome from "./User-header";
+import UserHome from "./User-Home";
 
 export default function UserDetails() {
   const [userData, setUserData] = useState("");
@@ -40,5 +41,11 @@ export default function UserDetails() {
       });
   }, []);
 
-  return admin ? <AdminHome /> : <UserHome userData={userData} />;
+  return  (
+
+    admin ? <AdminHome /> : <UserHome userData={userData} />
+    
+
+  
+  );
 }

@@ -48,7 +48,7 @@
           <AdminHome />
           <h2 className="container mt-5" style={{color:"Blue"}}>Add Product</h2>
             <div className="container mt-5">
-                    <form onSubmit={handleSubmit}>
+         <form onSubmit={handleSubmit}>
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" value={inputs.name} onChange={handleChange}  name="name"/>

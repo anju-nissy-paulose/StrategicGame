@@ -11,11 +11,11 @@ const Home1 = () => {
 
   return (
     <div>
-         <header>
+          <header>
       
       <Header />
       
-    </header>
+    </header> 
     <div class="main-home" style={{ backgroundImage: "url(./images/home-background.jpg)" }}>
          
 
@@ -75,15 +75,15 @@ const Home1 = () => {
             <div class="hovercap">Racing</div>
           </div>
           <div class="hoverwrap hoverwrap-game">
-            <a class="onlinegames-img" href="/A_Puzzles" ><img src="./images/action-img.jpg" alt="img" /></a>
+            <a class="onlinegames-img" href="/Strategy" ><img src="./images/action-img.jpg" alt="img" /></a>
             <div class="hovercap">Action</div>
           </div>
           <div class="hoverwrap hoverwrap-game">
-            <a class="onlinegames-img" href="/DeadlineCheck" ><img src="./images/fantasy-img.png" alt="img" /></a>
+            <a class="onlinegames-img" href="/Strategy" ><img src="./images/fantasy-img.png" alt="img" /></a>
             <div class="hovercap">Fantasy</div>
           </div>
           <div class="hoverwrap hoverwrap-game">
-            <a class="onlinegames-img" href="/VideoMain" ><img src="./images/brain-img.jpg" alt="img" /></a>
+            <a class="onlinegames-img" href="/Strategy" ><img src="./images/brain-img.jpg" alt="img" /></a>
             <div class="hovercap">Brain Games</div>
           </div>
         </div>

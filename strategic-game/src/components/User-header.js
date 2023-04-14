@@ -1,10 +1,13 @@
-import React from 'react';
+//import React from 'react';
 //import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import wishList from '../images/wishlist.png';
 import account from '../images/account.png';
 import myCart from '../images/cart.png';
-
+//import Home1 from '../components/Home/Home1';
+import { React ,useContext } from 'react';
+import Badge from 'react-bootstrap/Badge';
+import Cart from './OnlineGames/Puzzle/Cart';
 
 const logOut = () => {
   window.localStorage.clear();
@@ -12,13 +15,16 @@ const logOut = () => {
 };
 
 const User_Header = ({ userData }) =>{
+  const { state } = useContext(Cart);
+  const { cart } = state;
+
     return <div>
       <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <a class="navbar-brand" href="#" style={{paddingRight:"35em"}}>Welcome to Canada Mind Games</a>
 
       <a class="nav-item nav-link" href="/userStoreLocation" style={{paddingRight:"5em"}}>Store Location</a>
-      <a class="nav-item nav-link" href="#" style={{paddingRight:"5em"}}>Support</a>
+      <a class="nav-item nav-link" href="/Support" style={{paddingRight:"5em"}}>Support</a>
       <a class="nav-item nav-link " href="#" onClick={logOut} >Log Out  </a>
 
    
@@ -44,7 +50,14 @@ const User_Header = ({ userData }) =>{
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active" style={{paddingRight:"5em"}}>
-        <a class="nav-link" href="#" ><img src={wishList} width={35} height={35} /></a>
+        {/* <a class="nav-link" href="#" ><img src={wishList} width={35} height={35} /></a> */}
+        <a class="nav-link" href="/CartScreen" ><img src={wishList} width={35} height={35} />
+        {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    </Badge>
+                  )}
+                  </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
       <a class="nav-link" href="#"  ><img src={account} width={30} height={30} />{userData.fname}</a>
@@ -93,7 +106,7 @@ const User_Header = ({ userData }) =>{
         <a class="nav-link" href="/Tutorial">Tutorial </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
-        <a class="nav-link" href="#">Tournament </a>
+        <a class="nav-link" href="/Tournaments">Tournament </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
         <a class="nav-link" href="/aboutUs">About Us </a>

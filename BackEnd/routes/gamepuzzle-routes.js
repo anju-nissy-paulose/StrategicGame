@@ -30,7 +30,7 @@ puzzleRouter.get('/:id', async (req, res) => {
 
 //localhost:5000/api/puzzles/  --- Creates a new puzzle record in the DB (POST)
 puzzleRouter.post('/', async (req, res) => {
-  const {  name,slug,category,image,price,rating,description,link } = req.body;
+  const {  name,slug,category,image,price,rating,description,link,quantity} = req.body;
   let puzzle;
   try {
     puzzle = new PuzzleModel({
@@ -42,6 +42,7 @@ puzzleRouter.post('/', async (req, res) => {
       rating,
       description,
       link,
+      quantity
     });
     await puzzle.save();
   } catch (err) {

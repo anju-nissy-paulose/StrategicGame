@@ -27,7 +27,7 @@ const upcomingTourRouter = require('./routes/upcomingTourRoutes') ;
 const playedTourRouter = require('./routes/playedTourRoutes') ;
 const walletRouter = require('./routes/walletRoutes') ;
  //---------------------------------------------------------------------------//
-
+ const bookingRouter = require('./routes/booking-routes') ;
 //redis 
 const redis = require('redis');
 const client = redis.createClient();
@@ -62,6 +62,7 @@ app.use('/api/upcomingTournament', upcomingTourRouter); //localhost:5000/api/upc
 app.use('/api/playedTournament', playedTourRouter); //localhost:5000/api/playedTournament
 app.use('/api/wallet', walletRouter); //localhost:5000/api/wallet
 //-------------------------------------------------------------------------------------------//
+app.use('/api/booking', bookingRouter); //localhost:5000/api/booking
 
 app.post('/api/payment', async (req, res) => {
     try {

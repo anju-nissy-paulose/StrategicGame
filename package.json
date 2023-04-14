@@ -5,6 +5,7 @@
     "google-maps-react": "^2.0.6",
     "redis": "^4.6.5",
     "use-reducer-logger": "^1.0.2",
-    "util": "^0.12.5"
+    "util": "^0.12.5",
+    "validator": "^13.9.0"
   }
 }

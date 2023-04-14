@@ -39,6 +39,7 @@ import StripeForm from './components/StripeForm';
 
 //--------------------------------merging----------------------------------//
 import Home1 from './components/Home/Home1';
+import Home2 from './components/Home/Home2';
 import Puzzle from './components/OnlineGames/Puzzle/Puzzle';
 import Support from './components/Support/Support';
 import PuzzleScreen from './components/OnlineGames/Puzzle/PuzzleScreen';
@@ -55,6 +56,9 @@ import Puzzle_Edit from './components/Admin/GameEdit';
 import Puzzle_Create from './components/Admin/GameCreate';
 import Account from './components/UserAccount/Account';
 //---------------------------Merging Ends------------------------------------//
+import CartScreen from './components/OnlineGames/Puzzle/CartScreen';
+// import Cart from './components/Cart/cart';
+import BookingForm from './components/BookingForm';
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   return (
@@ -104,6 +108,7 @@ function App() {
 
           {/*--------------------------------- Merging------------------------------ */}
           <Route path="/Home1" element={<Home1 />} />
+          <Route path="/Home2" element={<Home2 />} />
           <Route path="/Puzzle" element={<Puzzle />} />
           <Route path="/Support" element={<Support />} />
           <Route path="/game/:slug" element={<PuzzleScreen />} />
@@ -121,8 +126,9 @@ function App() {
           <Route path="/Account" element={<Account />} />
           <Route path="/DinoPuzzle" element={<DinoPuzzle />} />
           {/* ---------------------------Merging Ends------------------------------------// */}
-          
-         
+          <Route path="/BookingForm" element={<BookingForm />} />
+          <Route path="/CartScreen" element={<CartScreen />} />
+          {/* <Route path="/Cart" element={<Cart />} /> */}
          
           </Routes>
        

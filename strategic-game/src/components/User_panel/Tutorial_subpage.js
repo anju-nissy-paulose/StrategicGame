@@ -5,10 +5,16 @@ import time from '../images/time.png'
 import Header from '../Header';
 import UserHome from "../User-header";
 import logo from '../images/logo.png';
+
+
 const URL = "http://localhost:5000/tutorial";
 const fetchHandler = async () => {
     return await axios.get(URL).then((res) => res.data);
   };
+
+//---------------------------------booking form-----------------------------------------------
+
+//-----------------------------------------------------------------
 
 function TutorialSubPage() {
   const [tutorials, setTutorials] = useState([]);
@@ -17,10 +23,7 @@ function TutorialSubPage() {
     fetchHandler().then((data) => setTutorials(data.tutorials));
   }, []);
   console.log(tutorials);
-  //const myArray = Object.values(tutorials);
-
-
-   //---------------------------------------------------
+ 
      // usr login data 
 
      const [userData, setUserData] = useState("");
@@ -85,7 +88,7 @@ function TutorialSubPage() {
                         </ul>
                         <div class="card-body">
                             <button type="submit" className="btn btn-primary mx-2" style={{fontSize:'18px'}}> Add to Cart</button>
-                            <button type="submit" className="btn btn-primary" style={{fontSize:'18px'}}>Book Now</button>
+                            <a type="submit" href='/BookingForm' className="btn btn-primary" style={{fontSize:'18px'}}>Book Now</a>
                         </div>
                 </div>
             ))}

@@ -56,8 +56,8 @@ function Dino() {
       .post("http://localhost:5000/api/playedTournament", {
         name: pgame.name,
         tourCode: pgame.slug,
-        username: "Ronald",
-        useremail: "ronaldthomas8793@gmail.com",
+        username: "Anju",
+        useremail: "anju@gmail.com",
         score: score,
         playedStatus: "yes",
         notificationStatus: "false",

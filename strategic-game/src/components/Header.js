@@ -14,7 +14,7 @@ const Header = ({ userData }) =>{
   <a class="navbar-brand" href="#" style={{paddingRight:"35em"}}>Welcome to Canada Mind Games</a>
 
       <a class="nav-item nav-link" href="/userStoreLocation" style={{paddingRight:"5em"}}>Store Location</a>
-      <a class="nav-item nav-link" href={Url} style={{paddingRight:"5em"}}>Support</a>
+      <a class="nav-item nav-link" href="/Support" style={{paddingRight:"5em"}}>Support</a>
     
       <a class="nav-item nav-link " href="/Login" >Sign In  </a> 
 
@@ -85,7 +85,7 @@ const Header = ({ userData }) =>{
         <a class="nav-link" href="/Login">Tutorial </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
-        <a class="nav-link" href="#">Tournament </a>
+        <a class="nav-link" href="/Login">Tournament </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
         <a class="nav-link" href="/aboutUs">About Us </a>

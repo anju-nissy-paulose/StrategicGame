@@ -10,6 +10,7 @@ const puzzleSchema = new mongoose.Schema(
     rating: { type: Number, required: true },
     description: { type: String, required: true },   
     link: { type: String, required: true },
+    quantity: { type: Number, required: true },
   },
   {
     timestamps: true,

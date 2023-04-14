@@ -82,11 +82,13 @@ function GameSets({ userId, productId }) {
                                         <p class="card-text">{game.author}</p>
                                         <ul class="list-group list-group-flush">
                                         <li class="list-group-item"><b>${game.price} </b>
+                                        
+                                        
                                         </li>
                                          </ul>
                                        
-                                        <a href="#" class="btn btn-primary"> Add to Cart </a> &nbsp;                                    
-                                        <a href="/StripeForm" class="btn btn-primary"> Buy </a>
+                                         <a href="#" class="btn btn-primary"> My Cart </a>                            
+                                        <a href="/StripeForm" style={{marginLeft:'.5em'}}  class="btn btn-primary"> Buy </a>
                                         
                                         
                                     </div>
