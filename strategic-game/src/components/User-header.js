@@ -19,6 +19,7 @@ const User_Header = ({ userData }) =>{
   const { cart } = state;
 
     return <div>
+      
       <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <a class="navbar-brand" href="#" style={{paddingRight:"35em"}}>Welcome to Canada Mind Games</a>
@@ -60,7 +61,7 @@ const User_Header = ({ userData }) =>{
                   </a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
-      <a class="nav-link" href="#"  ><img src={account} width={30} height={30} />{userData.fname}</a>
+      <a class="nav-link" href="/Account"  ><img src={account} width={30} height={30} />{userData.fname}</a>
       </li>
       <li class="nav-item" style={{paddingRight:"5em"}}>
       <a class="nav-link" href="#"><img src={myCart} width={30} height={30} /></a>

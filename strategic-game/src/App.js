@@ -59,6 +59,7 @@ import Account from './components/UserAccount/Account';
 import CartScreen from './components/OnlineGames/Puzzle/CartScreen';
 // import Cart from './components/Cart/cart';
 import BookingForm from './components/BookingForm';
+import User_Home from './components/User-Home';
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   return (
@@ -129,6 +130,7 @@ function App() {
           <Route path="/BookingForm" element={<BookingForm />} />
           <Route path="/CartScreen" element={<CartScreen />} />
           {/* <Route path="/Cart" element={<Cart />} /> */}
+          <Route path="/UserHome" element={<User_Home />} />
          
           </Routes>
        

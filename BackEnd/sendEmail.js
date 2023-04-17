@@ -2,8 +2,8 @@ const nodemailer = require('nodemailer');
 
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey("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");
-//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
+//sgMail.setApiKey("SG-xxxxxxxxxxx");
+
 const sendSuccessNotification = (userEmail) => {
     const msg = {
         to: userEmail,

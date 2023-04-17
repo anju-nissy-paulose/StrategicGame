@@ -1,8 +1,9 @@
 .dino_game {
     width: 600px;
-    height: 225px;
+    height: 30em;
     border: 1px solid black;
     margin: auto;
+    margin-top: 5em;
   }
   
   #dino {

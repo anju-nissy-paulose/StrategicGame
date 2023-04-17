@@ -6,7 +6,7 @@ function AddToWishlist({ userId, productId }) {
     try {
       await axios.post('http://localhost:5000/wishlist', { userId, productId });
       alert('Product added to wishlist.');
-      window.location.href = `/UserWishList/${userId}` ;
+      window.location.href = '/UserGameSets ';
     } catch (error) {
       console.error(error);
       alert('Error adding product to wishlist.');

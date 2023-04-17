@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext ,useState,useEffect} from 'react';
 import { Cart } from './Cart.js';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-//import UserHome from "../../User-header.js";
+import UserHome from "../../User-header.js";
 export default function CartScreen() {
 
     const { state, dispatch: ctxDispatch } = useContext(Cart);
@@ -34,48 +34,49 @@ export default function CartScreen() {
       const removeItemHandler = (item) => {
         ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: item });
       };
+    
+      // usr login data 
 
-  //     // usr login data 
-
-  //   const [userData, setUserData] = useState("");
-  //   const [admin, setAdmin] = useState(false);
+    const [userData, setUserData] = useState("");
+    const [admin, setAdmin] = useState(false);
   
-  //   useEffect(() => {
-  //     fetch("http://localhost:5000/registration/userData", {
-  //       method: "POST",
-  //       crossDomain: true,
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //         "Access-Control-Allow-Origin": "*",
-  //       },
-  //       body: JSON.stringify({
-  //         token: window.localStorage.getItem("token"),
-  //       }),
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         console.log(data, "userData");
+    useEffect(() => {
+      fetch("http://localhost:5000/registration/userData", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          token: window.localStorage.getItem("token"),
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data, "userData");
           
-  //         if (data.data.userType === "Admin") {
-  //           setAdmin(true);
-  //         }
+          if (data.data.userType === "Admin") {
+            setAdmin(true);
+          }
   
-  //         setUserData(data.data);
+          setUserData(data.data);
   
-  //         if (data.data === "token expired") {
-  //           alert("Token expired login again");
-  //           window.localStorage.clear();
-  //           window.location.href = "./Login";
-  //         }
-  //       });
-  //   }, []);
+          if (data.data === "token expired") {
+            alert("Token expired login again");
+            window.localStorage.clear();
+            window.location.href = "./Login";
+          }
+        });
+    }, []);
   
-  // };
+ 
 
       return (
         <div>
-           {/* <UserHome userData={userData} /> */}
+           <UserHome userData={userData} />
+           <div>
             <h3>Shopping Cart</h3>
             <Row>
         <Col md={8}>
@@ -160,6 +161,7 @@ export default function CartScreen() {
           </Card>
         </Col>
       </Row>
+    </div>
     </div>
   );
 }
